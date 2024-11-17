@@ -42,22 +42,3 @@ vectorstore_from_docs = PineconeVectorStore.from_documents(
 )
 
 
-#following code is for q&a without making a UI. Uncomment and run if you want to check else ignore and go to the file app.py
-
-# ## Cosine Similarity Retreive Results from VectorDB
-# def retrieve_query(query,k=2):
-#     matching_results=vectorstore_from_docs.similarity_search(query,k=k)
-#     return matching_results
-
-# from langchain.chains.question_answering import load_qa_chain
-# from langchain import OpenAI
-
-# llm=OpenAI(model_name="gpt-3.5-turbo-instruct",temperature=0.5)
-# chain=load_qa_chain(llm,chain_type="stuff")
-
-# ## Search answers from VectorDB
-# def retrieve_answers(query):
-#     doc_search=retrieve_query(query)
-#     print(doc_search)
-#     response=chain.run(input_documents=doc_search,question=query)
-#     return response

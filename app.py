@@ -95,10 +95,10 @@ import streamlit as st
 
 # Sidebar contents
 with st.sidebar:
-    st.title('💬 Ishaan varyani Gen AI Chat Bot')
+    st.title('💬  Gen AI "Chat with Books"')
     st.markdown('''
     ## About
-    This GPT helps in answering questions related to documents to it
+    This Gen AI chat bot helps in answering questions related to documents provided to it. It uses Open AI's LLM and Pine Cone Vector Data base to store the documents conent in vectors
 
         ''')
     
@@ -118,39 +118,6 @@ with st.sidebar:
     ''')
 
 
-# # Sidebar contents
-# with st.sidebar:
-#     st.title('💬 LLM Chat App on Ministry of New and Renewable Energy (Documents)...')
-#     st.markdown('''
-#     ## About
-#     This GPT helps in answering questions related to document of Ministry of Tribal Affairs
-
-
-
-#     [Documents Repository](https://drive.google.com/drive/folders/1lC40pdVKJJXFYIy3QNgYOTlk8yo6AEoY?usp=sharing)
- 
-#     ''')
-#     #add_vertical_space(5)
-#     st.write('Made by LBSNAA for learning purpose](https://www.lbsnaa.gov.in/)')
-
-# def main():
-#     #st.title("Question and Answering App powered by LLM and Pinecone")
-
-#     text_input = st.text_input("Ask your query...") 
-#     if st.button("Ask Query"):
-#         if len(text_input)>0:
-#             #st.info("Your Query: " + text_input)
-#             #answer = qa_with_sources(text_input)
-#             #st.success(answer)
-#             answer = ask_and_get_answer(vectorstore,text_input)
-#             st.success(answer)
-#             #st.success(answer['result'])
-#             #st.success(answer['Reference:\n'])
-
-# if __name__ == "__main__":
-#     main()
-#import streamlit as st
-#from your_module import ask_and_get_answer, vectorstore  # Assuming 'vectorstore' is initialized in 'your_module.py'
 
 def display_answer(answer):
     st.write("### Query")
@@ -170,7 +137,7 @@ def display_answer(answer):
             st.markdown(content)
 
 def main():
-    st.title("Ishaan varyani Gen AI Chat Bot")
+    st.title('Gen AI "Chat with Books"')
     text_input = st.text_input("Ask your query...") 
 
     if st.button("Ask Query"):
