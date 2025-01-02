@@ -20,7 +20,7 @@ region = 'us-east-1'
 
 spec = ServerlessSpec(cloud=cloud, region=region)
 
-index_name = 'ishaan-genai'
+index_name = 'ishaan-genai-1'
 
 # get openai api key from platform.openai.com
 OPENAI_API_KEY =  os.environ.get('OPENAI_API_KEY')
@@ -46,7 +46,7 @@ vectorstore = Pinecone(
 
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import RetrievalQA
-def ask_and_get_answer(vector_store, q, k=5):
+def ask_and_get_answer(vector_store, q, k=3):
     from langchain.chains import RetrievalQA
     from langchain_openai import ChatOpenAI
 
@@ -116,7 +116,6 @@ with st.sidebar:
     ---
 
     ''')
-
 
 
 def display_answer(answer):
